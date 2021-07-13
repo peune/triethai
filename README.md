@@ -1,4 +1,4 @@
-# PyTrie
+# TrieThai
 Trie for storing dictionary with search, approximate search, and spell correction functions. 
 Designed for Thai language, in mind, but should be pretty generic for other languages :)
 
@@ -42,7 +42,7 @@ print(res)
 # Comamnd line example
 ## Search
 ```
-python pytrie.py search -d dict.txt -q ตัวแปล
+python triethai.py search -d dict.txt -q ตัวแปล
 ```
 Should produce
 ```
@@ -52,7 +52,7 @@ query 'ตัวแปล' || closest 'ตัวแปร', distance 1
 
 ## Approximate search
 ```
-python pytrie.py approx_search -d dict.txt -q ตัวแปล
+python triethai.py approx_search -d dict.txt -q ตัวแปล
 ```
 Should produce
 ```
@@ -62,7 +62,7 @@ query 'ตัวแปล' || closest 'ตัวแปร', distance 1
 
 ## Spell correction
 ```
-python pytrie.py spell -d dict -q การปับฅ่าตัสแปฮ
+python triethai.py spell -d dict -q การปับฅ่าตัสแปฮ
 ```
 Should produce
 ```
@@ -72,7 +72,7 @@ spell
 
 We can also insert word segmentation separator, for example '|' by
 ```
-python pytrie.py spell -d dict -q การปับฅ่าตัสแปฮ --sep '|'
+python triethai.py spell -d dict -q การปับฅ่าตัสแปฮ --sep '|'
 ```
 Should produce
 ```
