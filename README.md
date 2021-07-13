@@ -13,8 +13,33 @@ This should make it faster for large dictionary.
 Spell correction perform simultanously correction & word segmentation.
 If there are no spelling error, it returns similar result as _maximal matching_ word segmentation.
 
+# Usage
+We need to load dictionary first into list of strings and Trie.
+```
+words,root = load_dictionary(dictionary_filename)
+```
 
-# Comamndline example
+Then we may choose which operation to perform 
+### Search
+```
+idx, score = nn_search(root, query)
+print('query \'%s\' || closest \'%s\', distance %.2f' % (query, words[idx], score))
+```
+
+### Approximate search
+```
+idx, score = approx_nn_search(root, query, 3)
+print('query \'%s\' || closest \'%s\', distance %.2f' % (query, words[idx], score))
+```
+
+### Spelling correction
+```
+res = spell_correction(words, root, beam, transit_cost, separator, query)
+print(res)
+```
+
+
+# Comamnd line example
 ## Search
 ```
 python pytrie.py search -d dict.txt -q ตัวแปล
