@@ -83,4 +83,4 @@ spell
 
 
 # Contributor
-- [https://github.com/peune](Sanparith Marukatat)
+- [Sanparith Marukatat](https://github.com/peune)
