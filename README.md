@@ -13,6 +13,8 @@ This should make it faster for large dictionary.
 Spell correction perform simultanously correction & word segmentation.
 If there are no spelling error, it returns similar result as _maximal matching_ word segmentation.
 
+For more detail, please refer to [Fun with string, Trie and edit distance](https://medium.com/nectec/%E0%B8%AA%E0%B8%99%E0%B8%B8%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%9A-string-trie-%E0%B9%81%E0%B8%A5%E0%B8%B0-edit-distance-a96f7e555e15) (in Thai).
+
 # Usage
 We need to load dictionary first into list of strings and Trie.
 ```
