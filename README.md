@@ -6,3 +6,5 @@ Designed for Thai language, in mind, but should be pretty generic for other lang
 
 ***
 
+# Contributor
+- [https://github.com/peune](Sanparith Marukatat)
