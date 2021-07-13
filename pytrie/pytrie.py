@@ -105,7 +105,7 @@ def nn_search(root, b):
         # update for new character
         for node in all_nodes:
             c2 = node.old_cost + 1
-            c3 = (0 if node.char == b[j-1] else 1) + node.parent.old_cost
+            c3 = (0 if node.char == b[j-1] else 1) + node.parent.old_cost*1.01
             
             node.cost = min(c2, c3)
 
@@ -181,7 +181,7 @@ def approx_nn_search(root, b, beam):
             if node.parent is None or not node.parent.active:
                 node.cost = min(node.old_cost, c2)
             else:
-                c3 = (0 if node.char == b[j-1] else 1) + node.parent.old_cost
+                c3 = (0 if node.char == b[j-1] else 1) + node.parent.old_cost*1.01
                 node.cost = min(c2, c3)
 
 
