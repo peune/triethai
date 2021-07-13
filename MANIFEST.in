@@ -1,0 +1,5 @@
+include LICENSE.txt
+include README.md
+
+# for simple test
+include dict.txt
