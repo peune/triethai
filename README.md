@@ -29,19 +29,26 @@ print('query \'%s\' || closest \'%s\', distance %.2f' % (query, words[idx], scor
 ```
 
 ### Approximate search
+Here we apply beam search to Trie search.
+This means that at every newly reading character, we search for best candidate.
+Then current candidates whose score is higher than best candidate score + beam will be prunned.
+We can set, for example, beam = 3.
 ```
 idx, score = approx_nn_search(root, query, 3)
 print('query \'%s\' || closest \'%s\', distance %.2f' % (query, words[idx], score))
 ```
 
 ### Spelling correction
+Beam can be 3, for example.
+The transit_cost force the model to prefer path with minimal number of words.
+We may set, transit_cost=1, for example.
 ```
 res = spell_correction(words, root, beam, transit_cost, separator, query)
 print(res)
 ```
 
 
-# Comamnd line example
+# Comand line example
 ## Search
 ```
 python triethai.py search -d dict.txt -q ตัวแปล
